@@ -1,5 +1,4 @@
 import discord
-from config import *
 import traceback
 
 class ChannelManager:

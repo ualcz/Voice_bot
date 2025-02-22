@@ -9,7 +9,7 @@ Este projeto é um bot do Discord que permite aos administradores gerenciar cana
 - **Listar Canais de Voz**: Lista todos os canais de voz personalizados existentes em um servidor.
 - **Remover Canal de Voz**: Permite que administradores removam canais de voz da lista de canais personalizados.
 
-
+![Alt text](./img/image.png)
 ## 🛠️ Requisitos
 
 Antes de começar, certifique-se de ter o seguinte:
