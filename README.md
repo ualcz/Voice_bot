@@ -37,13 +37,14 @@ Antes de começar, certifique-se de ter o seguinte:
 
 3. **Crie um Arquivo `.env`**:
 
-   No diretório raiz do seu projeto, crie um arquivo chamado `.env` e adicione seu token de bot do Discord:
+   No diretório raiz do seu projeto, crie um arquivo chamado `.env` e adicione seu token de bot do Discord e a link para seu servidor postgresql:
 
    ```plaintext
    TOKEN=seu_token_do_bot_discord
+   DATABASE_URL=seu_link
    ```
 
-   Substitua `seu_token_do_bot_discord` pelo seu token real do bot do Discord.
+   Substitua `seu_token_do_bot_discord` pelo seu token real do bot do Discord `seu_link` pelo link para seu servidor postgresql.
 
 ## 🕹️ Como Executar o Bot
 

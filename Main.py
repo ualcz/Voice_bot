@@ -7,32 +7,30 @@ from Command.CommandVoice import CommandVoice
 from Command.VoiceManager import ChannelManager
 from Command.Erro import Erro
 from Data.data import Database
-
-
-# Carrega variáveis de ambiente do arquivo .env
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+DB_DSN = os.getenv('DATABASE_URL')
 
-data=Database()
+data = Database(DB_DSN)
 
 class MyClient(discord.Client):
-    def __init__(self, *,db, intents: discord.Intents):
+    def __init__(self, *, db, intents: discord.Intents):
         super().__init__(intents=intents)
         self.tree = app_commands.CommandTree(self)
         self.database = db
 
     async def setup_hook(self):
+        await self.database.connect()
         await self.tree.sync()
-       
 
 intents = discord.Intents.default()
-client = MyClient(intents=intents,db=data)
-
+client = MyClient(intents=intents, db=data)
 
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user} (ID: {client.user.id})')
     print('------')
+    
 
 # Configure and setup Voice 
 Channel_Voice = ChannelManager(client=client)
