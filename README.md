@@ -23,7 +23,7 @@ Antes de começar, certifique-se de ter o seguinte:
 1. **Clone o Repositório**:
 
    ```bash
-   git clone https://github.com/ualcz/Discord_Cards.git
+   git clone https://github.com/ualcz/Voice_bot.git
    cd discord-voice-bot
    ```
 
@@ -51,7 +51,7 @@ Antes de começar, certifique-se de ter o seguinte:
 Para iniciar o bot, execute o seguinte comando:
 
 ```bash
-python Main.py
+python app.main.py
 ```
 
 Certifique-se de que seu arquivo `.env` esteja configurado com o token do seu bot para que funcione corretamente.
